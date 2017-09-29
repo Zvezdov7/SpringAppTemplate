@@ -83,7 +83,7 @@
                             <!--<wsdlFiles>-->
                                 <!--<wsdlFile>s</wsdlFile>-->
                             <!--</wsdlFiles>-->
-                            <wsdlLocation>META-INF/wsdl/schemas.sitels.ru.FORIS.IL.ResourceOperations.wsdl</wsdlLocation>
+                            <wsdlLocation>zxxz</wsdlLocation>
                             <!--<staleFile>${project.build.directory}/jaxws/stale/s</staleFile>-->
                         </configuration>
                         <id>sss</id>
