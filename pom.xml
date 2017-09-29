@@ -35,7 +35,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <plugin>
@@ -60,13 +59,53 @@
                 <!--</executions>-->
                 <!--<configuration>-->
                     <!--<force>true</force>-->
-                    <!--<hostname>wljavadev.siblion.corp</hostname>-->
+                    <!--<hostname>host</hostname>-->
                     <!--<port>9990</port>-->
                     <!--<username>admin</username>-->
-                    <!--<password>adminadmin77</password>-->
+                    <!--<password>pass</password>-->
                     <!--<filename>Template-1.0-SNAPSHOT.war</filename>-->
                 <!--</configuration>-->
             <!--</plugin>-->
+            <plugin>
+                <groupId>org.jvnet.jax-ws-commons</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>2.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <!--<bindingDirectory>src/main/resources/bindings</bindingDirectory>-->
+                            <!--<bindingFiles>-->
+                                <!--<bindingFile>ResourceOperations.xjb</bindingFile>-->
+                            <!--</bindingFiles>-->
+                            <!--<wsdlFiles>-->
+                                <!--<wsdlFile>s</wsdlFile>-->
+                            <!--</wsdlFiles>-->
+                            <wsdlLocation>META-INF/wsdl/schemas.sitels.ru.FORIS.IL.ResourceOperations.wsdl</wsdlLocation>
+                            <!--<staleFile>${project.build.directory}/jaxws/stale/s</staleFile>-->
+                        </configuration>
+                        <id>sss</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>javax.xml</groupId>
+                        <artifactId>webservices-api</artifactId>
+                        <version>1.4</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
+                    <xnocompile>true</xnocompile>
+                    <verbose>true</verbose>
+                    <extension>true</extension>
+                    <!--                    <catalog>${basedir}/src/jax-ws-catalog.xml</catalog>-->
+                    <target>2.1</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

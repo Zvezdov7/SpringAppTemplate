@@ -1,4 +1,4 @@
-package ru.siblion.zvezdov.cardsapi.jaxrs;
+package ru.siblion.zvezdov.springapptemplate.jaxrs;
 
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientRequestFilter;

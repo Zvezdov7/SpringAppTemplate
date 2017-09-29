@@ -1,4 +1,4 @@
-package ru.siblion.zvezdov.cardsapi.model;
+package ru.siblion.zvezdov.springapptemplate.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
